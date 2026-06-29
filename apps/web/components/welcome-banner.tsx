@@ -3,28 +3,36 @@
 import { useState, useEffect } from "react"
 import { X } from "lucide-react"
 
+const NOTIFICATION_MESSAGE = "Welcome to the class! :)"
+
+function notificationKey(message: string) {
+  return `dismissed-notification:${message}`
+}
+
 export function WelcomeBanner() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   const [dismissing, setDismissing] = useState(false)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    if (!localStorage.getItem(notificationKey(NOTIFICATION_MESSAGE))) {
+      setVisible(true)
+    }
   }, [])
 
   function handleDismiss() {
     setDismissing(true)
+    localStorage.setItem(notificationKey(NOTIFICATION_MESSAGE), "1")
     setTimeout(() => setVisible(false), 300)
   }
 
-  if (!visible || !mounted) return null
+  if (!visible) return null
 
   return (
     <div className="fixed left-0 right-0 top-14 z-50 flex justify-center py-3 pointer-events-none">
       <div
         className={`welcome-pill pointer-events-auto relative inline-flex items-center gap-2 rounded-full bg-primary/10 backdrop-blur-sm px-5 py-2 text-sm font-medium text-primary shadow-sm transition-all duration-300 ${dismissing ? "opacity-0 scale-95" : ""}`}
       >
-        <span>Welcome to the class! :)</span>
+        <span>{NOTIFICATION_MESSAGE}</span>
         <button
           onClick={handleDismiss}
           className="rounded-full p-0.5 transition-colors hover:bg-primary/10"

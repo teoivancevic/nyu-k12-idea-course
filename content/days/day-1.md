@@ -6,7 +6,7 @@ lectureMaterials:
     url: "https://docs.google.com/presentation/d/1wI2xk1OOhiLKKOnjTzmCpTMjbL6L0Rse/edit?usp=sharing&ouid=104677514528733065099&rtpof=true&sd=true"
   - label: "Problem Research & Domains"
     url: "https://docs.google.com/document/d/11ptcVDcJ7ILxyGLEJ4XHDP9cLqd-QQSqBbtaWh5GdNg/edit?usp=sharing"
-granolaNotesUrl: "https://google.com"
+granolaNotesUrl: ""
 workshopLinks:
   - label: "Google Gemini"
     url: "https://gemini.google.com"
@@ -22,190 +22,233 @@ advancedLinks:
 actionItems:
   - "Form your team of 3"
   - "Pick your problem domain"
-  - "Run the prompt sequence for your domain"
-  - "Draft a one-sentence problem statement"
-promptIntro: "Use the sequence for your team's domain. Same four steps, same logic."
+  - "Run the prompt sequence for your domain in Gemini"
+  - "Upload one article to NotebookLM and ask it a question"
+  - "Draft your one-sentence problem statement"
+  - "Prepare your 2-min team debrief for the class"
+promptIntro: "Same four-step logic for each domain. Steps 3 and 4 are specific to the domain — don't swap them."
 promptSections:
   - id: "small-business"
     label: "Small Business"
     prompts:
       - step: 1
-        title: "Who's affected?"
-        prompt: "Who are the real people affected when small business owners in NYC can't easily navigate permits, health codes, and labor law? List them by role — actual humans, not categories."
+        title: "Map who's affected"
+        prompt: "Who are the real people affected when small business owners in NYC can't easily navigate permits, health codes, and labor law? List them by role — specific humans, not categories. Think about who's in the room when something goes wrong."
       - step: 2
-        title: "Who's most at risk?"
-        prompt: "Of those people, who faces the most immediate consequences when they get something wrong — a fine, a lawsuit, a lost license? Pick one and explain why."
+        title: "Find who's most exposed"
+        prompt: "Of those people, who faces the most immediate consequence when they get something wrong — a fine, a failed inspection, a lawsuit, a lost license? Pick one and make the case for why their situation is the most urgent."
       - step: 3
-        title: "Find the pain point"
-        prompt: "What's one specific moment in that person's day or week where getting the wrong information causes real harm?"
+        title: "Get to the failure moment"
+        prompt: "I'm focusing on a first-generation immigrant restaurant owner in NYC who speaks limited English. Walk me through the exact moment in the Department of Health inspection process where someone like her is most likely to get cited for something she didn't know was a violation. What rule? What's the gap between what she was told and what the code actually says?"
       - step: 4
-        title: "Find a real fact"
-        prompt: "Give me one real statistic or data point that shows how common this problem is in NYC. Tell me where the number comes from."
+        title: "Ground it in real data"
+        prompt: "I need a real number from NYC's restaurant inspection data at data.cityofnewyork.us. Specifically: how many violations per year are issued to restaurants, and what are the most common violation categories? Tell me what to search for and what the number shows about the scale of this problem."
   - id: "public-benefits"
     label: "Public Benefits"
     prompts:
       - step: 1
-        title: "Who's affected?"
-        prompt: "Who are the real people affected when eligible New Yorkers don't apply for benefits like SNAP, Medicaid, or childcare subsidies? List them by role — actual humans, not categories."
+        title: "Map who's affected"
+        prompt: "Who are the real people affected when eligible New Yorkers don't apply for benefits like SNAP, Medicaid, or childcare subsidies? List them by role — specific humans, not \"low-income families.\" Think about who doesn't show up in the data because they never applied."
       - step: 2
-        title: "Who's most at risk?"
-        prompt: "Of those people, who is most likely to miss out on benefits they're actually entitled to? Pick one group and explain why."
+        title: "Find who's most exposed"
+        prompt: "Of those people, who is most likely to qualify for a benefit and never receive it — not because they refused, but because they never got through the process? Pick one group and explain what specifically breaks down for them."
       - step: 3
-        title: "Find the barrier"
-        prompt: "What's one specific barrier that stops that person from even starting the application process?"
+        title: "Get to the failure moment"
+        prompt: "I'm focusing on a monolingual Spanish-speaking mother of two in the Bronx trying to apply for childcare subsidies through ACCESS NYC. Walk me through the exact point in that application where someone like her is most likely to stop. What does she see? What question or step is the breaking point and why?"
       - step: 4
-        title: "Find a real fact"
-        prompt: "Give me one real statistic or data point that shows how many eligible people aren't receiving a benefit they qualify for. Tell me where the number comes from."
+        title: "Ground it in real data"
+        prompt: "I need a real number about how many eligible New Yorkers aren't receiving SNAP or Medicaid benefits they qualify for. The NYC Human Resources Administration and the NYC Open Data portal publish this kind of data. Point me to a specific dataset or report and tell me what number to pull."
   - id: "college-affordability"
     label: "College Aid"
     prompts:
       - step: 1
-        title: "Who's affected?"
-        prompt: "Who are the real people affected when families can't figure out what college will actually cost or whether they're getting the aid they're entitled to? List them by role — actual humans, not categories."
+        title: "Map who's affected"
+        prompt: "Who are the real people affected when families can't figure out what college will actually cost or whether they're getting all the aid they're entitled to? List them by role — specific humans at specific moments in the process."
       - step: 2
-        title: "Who's most at risk?"
-        prompt: "Of those people, who is most likely to make a bad financial decision because the information was confusing or wrong? Pick one and explain why."
+        title: "Find who's most exposed"
+        prompt: "Of those people, who is most likely to make a bad financial decision — or give up entirely — because the information was confusing, delayed, or wrong? Pick one and explain what that decision costs them concretely."
       - step: 3
-        title: "Find the pain point"
-        prompt: "What's one specific moment in the financial aid process where confusion causes someone to leave money on the table or give up entirely?"
+        title: "Get to the failure moment"
+        prompt: "I'm focusing on a first-generation college student whose family just completed the FAFSA. She received her financial aid offer letters from three schools but can't tell which one is actually the best deal because the letters use different formats and terminology. Walk me through exactly where she gets confused and what question she can't answer."
       - step: 4
-        title: "Find a real fact"
-        prompt: "Give me one real statistic or data point that shows how widespread this confusion is. Tell me where the number comes from."
+        title: "Ground it in real data"
+        prompt: "I need real data from the College Scorecard at collegescorecard.ed.gov. Specifically: what's the gap between the advertised sticker price and the average net price actually paid at a mid-tier private university? Tell me what fields to look at and what that gap shows about the information problem families face."
   - id: "rental-scams"
     label: "Rental Scams"
     prompts:
       - step: 1
-        title: "Who's actually involved?"
-        prompt: "Who are the real people affected by rental listing scams? List them by role — not broad categories, actual humans. For example: a 19-year-old moving out for the first time, a landlord whose listing gets copied by a scammer, a property manager dealing with fraud complaints."
+        title: "Map who's involved"
+        prompt: "Who are the real people affected by rental listing scams? List them by role — not broad categories, specific humans. For example: a 19-year-old moving out for the first time, a landlord whose real listing gets copied by a scammer, a property manager fielding fraud complaints from applicants."
       - step: 2
-        title: "Narrow to who's most at risk"
-        prompt: "Of those people, who faces the most immediate financial harm and has the least protection or recourse? Pick one and explain why."
+        title: "Find who's most exposed"
+        prompt: "Of the people you listed, who faces the most immediate financial harm and has the least protection or recourse after it happens? Pick one and make the case."
       - step: 3
-        title: "Find the specific pain point"
-        prompt: "What's one specific thing that makes it hard for that person to spot a fake listing before they send money?"
+        title: "Get to the failure moment"
+        prompt: "I'm focusing on a first-time renter, 18-22 years old, searching on Craigslist or Facebook Marketplace. Describe the exact moment in that process where a scam listing is hardest to distinguish from a real one. What does the listing look like? What does the scammer do next? Be specific."
       - step: 4
-        title: "Find a real fact"
-        prompt: "Give me one real statistic or data point that proves this is a widespread problem, not just an edge case. Tell me where the number comes from."
+        title: "Ground it in real data"
+        prompt: "I need one real, verifiable statistic about how common or costly rental listing scams are — specifically for people aged 18-29. The FTC publishes consumer fraud data at ftc.gov/exploredata. Point me to the right dataset and tell me what number to look for."
 ---
 
-## Part 1: A Brief History of Modern AI
+## How We Got Here
 
-Three moments that matter:
+Six years that changed everything:
 
-- **2017** — Google researchers publish *Attention Is All You Need*, the architecture that everything you're about to use is built on. (Link in Advanced Reading if you want to go deeper.)
-- **2020** — GPT-3 drops. For the first time, a model is good enough that people outside of research labs start paying attention.
-- **2022** — ChatGPT. The moment AI became everyone's problem.
+- **2017** — Google researchers publish *Attention Is All You Need*. Nobody outside of ML research notices. It becomes the foundation everything below is built on.
+- **2022** — ChatGPT launches. A million users in five days. For the first time, anyone can have a conversation with a model that sounds like it understands you.
+- **2023** — GPT-4. The gap between "impressive party trick" and "actually useful for real work" closes fast.
+- **2024** — Models start taking actions, not just answering. They browse, they write code, they call APIs. The word "agent" stops being jargon.
+- **2025** — Claude Code, Cursor, Gemini inside Docs and Sheets. AI is no longer a chatbot you visit. It's inside the tools you already use, doing parts of the work.
 
-### How it actually works
-
-These tools don't "know" things the way you do. Before you ever type a message, the model read an enormous amount of text — books, articles, websites, conversations. What's left behind isn't memory. It's a giant set of patterns about how language tends to flow.
-
-When you type something, it doesn't look anything up. It predicts the most likely next word. Then the next. Then the next. Over and over until it has a full response.
-
-**Confident and correct are two completely different things to it.** That's why the NYC chatbot this morning didn't lie — it just predicted the most confident-sounding answer about tip law. Nobody checked whether "likely sounding" was the same as true.
+The question stopped being *"is AI real?"* around 2023. The question now is *"which parts of your workflow does it own, and which parts do you?"* That's what this program is actually about.
 
 ---
 
-## Part 2: The One Skill That Makes Everything Else Work
+## How It Works (The Short Version)
 
-Here's a prompt someone might write on their first day:
+Before you ever type a message, the model read an enormous amount of text — books, articles, code, conversations, websites. What's left isn't memory or understanding. It's a massive set of patterns: given this sequence of words, what word is most likely to come next?
 
-```
-Help me solve the problem of rental scams in New York City for first-time renters. Give me the research, the data, the stakeholders, and a problem statement.
-```
+When you type something, it doesn't think, look anything up, or reason through a problem. It predicts the next token. Then the next. Then the next — until it has a full response.
 
-What comes back: a wall of text, probably some hallucinated statistics, no clear angle, nothing you can actually use or evaluate.
+This is why **confident and correct are two completely different things.** The NYC chatbot this morning didn't lie about tip law. It predicted the most confident-sounding answer. Nobody — not the model, not the city — checked whether "likely" meant "true."
 
-The problem isn't the words. It's the size of the ask. You handed AI the whole task at once and accepted whatever came out.
-
-**The fix isn't magic wording. It's breaking the task into steps.**
-
-Here's the same goal, done as a sequence. Each prompt builds on the last:
-
-### Prompt sequence — Rental Scams (demo)
-
-**Step 1 — Who's actually involved?**
-
-```
-Who are the real people affected by rental listing scams? List them by role — not broad categories, actual humans. For example: a 19-year-old moving out for the first time, a landlord whose listing gets copied by a scammer, a property manager dealing with fraud complaints.
-```
-
-**Step 2 — Narrow to who's most at risk**
-
-```
-Of those people, who faces the most immediate financial harm and has the least protection or recourse? Pick one and explain why.
-```
-
-**Step 3 — Find the specific pain point**
-
-```
-What's one specific thing that makes it hard for that person to spot a fake listing before they send money?
-```
-
-**Step 4 — Find a real fact**
-
-```
-Give me one real statistic or data point that proves this is a widespread problem, not just an edge case. Tell me where the number comes from.
-```
-
-By the time you finish Step 4, you have almost everything you need to write your problem statement sentence. That's not a coincidence — that sequence is the same funnel you're running this afternoon.
+This is also why what you put in determines everything about what comes out.
 
 ---
 
-## Part 3: Tool Tour
+## Garbage In, Garbage Out
 
-Quick orientation to the four tools you'll use across this program. Today is about knowing what each one is for. You'll go deeper as the weeks go on.
+Let's make this concrete. Here are three prompts. All three are bad, for the same reason — but it gets less obvious each time.
+
+**Bad prompt 1:**
+```
+Build me a rocketship. No mistakes.
+```
+*"No mistakes" tells the model nothing. A rocketship for what? How big? What fuel? The output will be something — it's just not what you needed.*
+
+**Bad prompt 2:**
+```
+Build me a clone of amazon.com. No mistakes.
+```
+*More specific domain, same problem. It'll try. You'll get hundreds of lines of something. None of it will be right because you never said what "right" means.*
+
+**Bad prompt 3 — this one looks reasonable. That's the trap:**
+```
+Help me solve the problem of rental scams in NYC for first-time 
+renters. Give me the research, the data, the stakeholders, and 
+a problem statement.
+```
+*This sounds like a research prompt. It isn't. You handed it the entire project at once. What comes back will be long, generic, and full of statistics you can't verify. You won't know what to do with it.*
+
+The problem is never the words. It's the size of the ask.
+
+---
+
+## The Fix: One Step at a Time
+
+Same goal as Bad Prompt 3 — understand the rental scam problem well enough to write one clear problem statement. But broken into steps where each output feeds the next.
+
+**Step 1 — Map who's actually involved**
+```
+Who are the real people affected by rental listing scams? 
+List them by role — not broad categories, specific humans. 
+For example: a 19-year-old moving out for the first time, 
+a landlord whose real listing gets copied by a scammer, 
+a property manager fielding fraud complaints from applicants.
+```
+
+**Step 2 — Find who's most exposed**
+```
+Of the people you listed, who faces the most immediate 
+financial harm and has the least protection or recourse 
+after it happens? Pick one and make the case.
+```
+
+**Step 3 — Get to the specific failure moment**
+```
+I'm focusing on a first-time renter, 18-22 years old, 
+searching on Craigslist or Facebook Marketplace. 
+Describe the exact moment in that process where a 
+scam listing is hardest to distinguish from a real one. 
+What does the listing look like? What does the scammer 
+do next? Be specific.
+```
+
+**Step 4 — Ground it in real data**
+```
+I need one real, verifiable statistic about how common 
+or costly rental listing scams are — specifically for 
+people aged 18-29. The FTC publishes consumer fraud 
+data at ftc.gov/exploredata. Point me to the right 
+dataset and tell me what number to look for.
+```
+
+When you finish Step 4 you have: a specific person, a specific moment of failure, and a real number that proves it's not an edge case. That's the problem statement sentence. Run the same logic on your domain.
+
+---
+
+## The Four Tools
+
+Quick orientation. Each one has a different job.
 
 ### Google Gemini
+General-purpose AI assistant. Your main tool for research, brainstorming, and iterating. This is where you run your prompt sequences.
 
-Your main research and brainstorming tool. Use it for the prompt sequences above, for exploring your domain, and for drafting and iterating on your problem statement.
+What it's good at: exploring a problem space fast, generating options, drafting and refining.
+What to watch: it will sound confident about things it's wrong about. Always check numbers against the actual source.
 
 → [gemini.google.com](https://gemini.google.com)
 
 ### NotebookLM
+AI that only talks about what you give it. You upload sources — an article, a report, a dataset description — and it answers questions based only on those. No open internet, no hallucinations from elsewhere.
 
-AI that only talks about what you give it. Upload an article or document, and it answers questions based only on that source — no hallucinations from the open internet. Useful when you need grounded, sourced answers.
-
-Try it today: upload one of the background articles from your domain and ask it *"Who is affected by this problem and how?"*
+Use it today: take one background article from your domain's task doc and upload it. Ask: *"Who is most affected by this problem and what does it actually cost them?"* Compare what it says to what Gemini said about the same domain.
 
 → [notebooklm.google.com](https://notebooklm.google.com)
 
 ### Google AI Studio
-
-Where you'll build your actual AI prototype in Week 2. You write a system prompt, define how the AI should behave, and test it with real inputs. Today is just a first look — we're coming back to this on Day 5.
+Where you'll build your prototype in Week 2. You write a system prompt that defines how an AI should behave, then test it with real inputs. Today is a first look — we're coming back on Day 5.
 
 → [aistudio.google.com](https://aistudio.google.com)
 
-### Google Workspace (Gemini in Docs/Sheets)
-
-Gemini built into the tools you already use. Useful for drafting and refining your problem statement document, summarizing research, or cleaning up notes.
+### Gemini in Google Workspace
+Gemini built into Docs and Sheets. Useful for drafting and cleaning up your problem statement, organizing research notes, or turning a messy Gemini output into something structured. Available inside any Google Doc via the side panel.
 
 ---
 
-## Part 4: Your Turn
+## Your Turn
 
-### Round 1
+### Round 1 — Run the sequence
 
-Open Gemini. Run Steps 1 and 2 of the prompt sequence for your domain. Don't edit the output yet — just read it and notice what it assumed that you didn't say.
+Open Gemini. Use the prompt sequence for your domain (tabs below). Run Steps 1 and 2. Don't edit the output — just read it and note one thing it assumed that you didn't say.
 
 ### Share out
 
-One or two teams share their prompt and what came back. Class looks at it together:
-
-- Is this specific enough that two different people would get the same answer?
-- What did Gemini assume that you didn't actually say?
-- What would you add to make it more useful?
+One or two teams put their prompt on screen. Class looks at it together:
+- What did Gemini assume you didn't actually say?
+- Is the output specific enough that two teams would get different answers for different domains?
+- What one thing would you add to make Step 1 more precise?
 
 ### Revision
 
-Rewrite your Step 1 or 2 prompt based on what you just heard. Run it again. Compare the two outputs.
+Rewrite your Step 1 based on what just came up. Run it again. Put the two outputs side by side.
 
-The output changed not because you found better words — but because you gave it a clearer task.
+The output improved not because you found better words — because you gave it a more specific task.
+
+### NotebookLM
+
+While one person runs the revision in Gemini, have another team member open NotebookLM and upload one article from your domain's reading list. Ask it the same Step 1 question. Compare what it says to what Gemini said.
+
+### End of day
+
+Each team presents a **2-minute debrief** to the class — no slides. Three things: what's your pain point, why does it matter, and what's one real fact that backs it up. Use what you found today.
 
 ---
 
-## Wrapping Up
+## One Sentence
 
-Everything you did this afternoon — breaking it into steps, checking the output, revising — that's the core skill. Not just for today. It's how you'll research your problem statement tomorrow, how you'll design your solution in Week 2, and how you'll build your prototype.
+Before the end of today, your team should have a draft of this sentence:
 
-The tool changes. The approach doesn't.
+> **[Who]** struggles to **[what]**, which causes **[consequence]**, shown by **[data point]**.
+
+It doesn't have to be perfect. It needs to be specific. If it could describe any city, any person, or any problem, it's still too vague.

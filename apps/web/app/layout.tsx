@@ -53,14 +53,14 @@ export default function RootLayout({
               <DayNavMobile />
             </div>
 
-            <div className="mx-auto max-w-7xl">
-              <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-0">
-                <aside className="hidden lg:block sticky top-14 h-[calc(100vh-3.5rem)] border-r">
-                  <DayNav />
-                </aside>
+            <div className="lg:grid lg:grid-cols-[240px_1fr] lg:gap-0">
+              <aside className="hidden lg:block sticky top-14 h-[calc(100vh-3.5rem)] border-r">
+                <DayNav />
+              </aside>
 
-                <main className="min-w-0">{children}</main>
-              </div>
+              <main className="min-w-0">
+                <div className="mx-auto max-w-5xl">{children}</div>
+              </main>
             </div>
           </div>
         </ThemeProvider>

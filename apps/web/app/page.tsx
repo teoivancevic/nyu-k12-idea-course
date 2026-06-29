@@ -1,19 +1,39 @@
-import { Button } from "@workspace/ui/components/button"
+import { courseConfig } from "@content/config"
+import { ScheduleTable } from "@/components/schedule-table"
+import { MapPin, Clock, Calendar } from "lucide-react"
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
+    <div className="px-4 sm:px-6 py-12 sm:py-20 max-w-3xl">
+      <div className="mb-12 sm:mb-16">
+        <p className="text-sm font-medium text-primary mb-3 tracking-wide uppercase">
+          {courseConfig.program} · {courseConfig.semester}
+        </p>
+        <h1 className="font-[family-name:var(--font-heading-var)] text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
+          {courseConfig.title}
+        </h1>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-muted-foreground">
+          <span className="flex items-center gap-2">
+            <Calendar className="size-4 text-primary/70" />
+            {courseConfig.dates}
+          </span>
+          <span className="flex items-center gap-2">
+            <Clock className="size-4 text-primary/70" />
+            {courseConfig.times}
+          </span>
+          <span className="flex items-center gap-2">
+            <MapPin className="size-4 text-primary/70" />
+            {courseConfig.location}
+          </span>
         </div>
       </div>
+
+      <section>
+        <h2 className="font-[family-name:var(--font-heading-var)] text-xl font-semibold mb-6">
+          Course Schedule
+        </h2>
+        <ScheduleTable />
+      </section>
     </div>
   )
 }

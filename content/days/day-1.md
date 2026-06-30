@@ -124,6 +124,7 @@ The problem is never the words. It's the size of the ask.
 
 Six years that changed everything:
 
+- **2012** — AlexNet wins ImageNet by a landslide. A neural network beats classical computer vision so decisively that the entire field pivots overnight. The deep learning era begins.
 - **2017** — Google researchers publish *Attention Is All You Need*. Nobody outside of ML research notices. It becomes the foundation everything below is built on.
 - **2022** — ChatGPT launches. A million users in five days. For the first time, anyone can have a conversation with a model that sounds like it understands you.
 - **2023** — GPT-4. The gap between "impressive party trick" and "actually useful for real work" closes fast.

@@ -8,6 +8,8 @@ lectureMaterials:
     url: "https://docs.google.com/document/d/11ptcVDcJ7ILxyGLEJ4XHDP9cLqd-QQSqBbtaWh5GdNg/edit?usp=sharing"
 granolaNotesUrl: ""
 workshopLinks:
+  - label: "Worksheet"
+    url: "https://docs.google.com/document/d/1N0sxwjlnORkmiZ3vu5ZEbWOlMB9uDV6R/edit?usp=drive_link&ouid=104677514528733065099&rtpof=true&sd=true"
   - label: "Google Gemini"
     url: "https://gemini.google.com"
   - label: "NotebookLM"

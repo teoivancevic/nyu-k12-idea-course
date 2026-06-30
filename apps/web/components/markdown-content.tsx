@@ -65,7 +65,7 @@ export function MarkdownContent({ html }: { html: string }) {
       }
 
       const language = match[1] || ""
-      const code = match[2]
+      const code = (match[2] ?? "")
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")

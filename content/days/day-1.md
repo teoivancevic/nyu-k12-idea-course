@@ -90,6 +90,34 @@ promptSections:
         prompt: "I need one real, verifiable statistic about how common or costly rental listing scams are — specifically for people aged 18-29. The FTC publishes consumer fraud data at ftc.gov/exploredata. Point me to the right dataset and tell me what number to look for."
 ---
 
+## Garbage In, Garbage Out
+
+![Garbage in, garbage out — a visual showing trash being fed into a cloud machine and more trash coming out](/garbage-in-garbage-out.png)
+
+Let's make this concrete. Here are three prompts. All three are bad, for the same reason — but it gets less obvious each time.
+
+**Bad prompt 1:**
+```
+Build me a rocketship. No mistakes.
+```
+*"No mistakes" tells the model nothing. A rocketship for what? How big? What fuel? The output will be something — it's just not what you needed.*
+
+**Bad prompt 2:**
+```
+Build me a clone of amazon.com. No mistakes.
+```
+*More specific domain, same problem. It'll try. You'll get hundreds of lines of something. None of it will be right because you never said what "right" means.*
+
+**Bad prompt 3 — this one looks reasonable. That's the trap:**
+```
+Help me solve the problem of rental scams in NYC for first-time renters. Give me the research, the data, the stakeholders, and a problem statement.
+```
+*This sounds like a research prompt. It isn't. You handed it the entire project at once. What comes back will be long, generic, and full of statistics you can't verify. You won't know what to do with it.*
+
+The problem is never the words. It's the size of the ask.
+
+---
+
 ## How We Got Here
 
 Six years that changed everything:
@@ -110,37 +138,11 @@ Before you ever type a message, the model read an enormous amount of text — bo
 
 When you type something, it doesn't think, look anything up, or reason through a problem. It predicts the next token. Then the next. Then the next — until it has a full response.
 
+![Token prediction diagram showing "The sky is" going into an LLM which outputs probability scores for next words — blue: -0.96, clear: -1.60, usually: -2.47 — resulting in "The sky is blue"](/token-prediction.png)
+
 This is why **confident and correct are two completely different things.** The NYC chatbot this morning didn't lie about tip law. It predicted the most confident-sounding answer. Nobody — not the model, not the city — checked whether "likely" meant "true."
 
 This is also why what you put in determines everything about what comes out.
-
----
-
-## Garbage In, Garbage Out
-
-Let's make this concrete. Here are three prompts. All three are bad, for the same reason — but it gets less obvious each time.
-
-**Bad prompt 1:**
-```
-Build me a rocketship. No mistakes.
-```
-*"No mistakes" tells the model nothing. A rocketship for what? How big? What fuel? The output will be something — it's just not what you needed.*
-
-**Bad prompt 2:**
-```
-Build me a clone of amazon.com. No mistakes.
-```
-*More specific domain, same problem. It'll try. You'll get hundreds of lines of something. None of it will be right because you never said what "right" means.*
-
-**Bad prompt 3 — this one looks reasonable. That's the trap:**
-```
-Help me solve the problem of rental scams in NYC for first-time 
-renters. Give me the research, the data, the stakeholders, and 
-a problem statement.
-```
-*This sounds like a research prompt. It isn't. You handed it the entire project at once. What comes back will be long, generic, and full of statistics you can't verify. You won't know what to do with it.*
-
-The problem is never the words. It's the size of the ask.
 
 ---
 
@@ -150,37 +152,22 @@ Same goal as Bad Prompt 3 — understand the rental scam problem well enough to 
 
 **Step 1 — Map who's actually involved**
 ```
-Who are the real people affected by rental listing scams? 
-List them by role — not broad categories, specific humans. 
-For example: a 19-year-old moving out for the first time, 
-a landlord whose real listing gets copied by a scammer, 
-a property manager fielding fraud complaints from applicants.
+Who are the real people affected by rental listing scams? List them by role — not broad categories, specific humans. For example: a 19-year-old moving out for the first time, a landlord whose real listing gets copied by a scammer, a property manager fielding fraud complaints from applicants.
 ```
 
 **Step 2 — Find who's most exposed**
 ```
-Of the people you listed, who faces the most immediate 
-financial harm and has the least protection or recourse 
-after it happens? Pick one and make the case.
+Of the people you listed, who faces the most immediate financial harm and has the least protection or recourse after it happens? Pick one and make the case.
 ```
 
 **Step 3 — Get to the specific failure moment**
 ```
-I'm focusing on a first-time renter, 18-22 years old, 
-searching on Craigslist or Facebook Marketplace. 
-Describe the exact moment in that process where a 
-scam listing is hardest to distinguish from a real one. 
-What does the listing look like? What does the scammer 
-do next? Be specific.
+I'm focusing on a first-time renter, 18-22 years old, searching on Craigslist or Facebook Marketplace. Describe the exact moment in that process where a scam listing is hardest to distinguish from a real one. What does the listing look like? What does the scammer do next? Be specific.
 ```
 
 **Step 4 — Ground it in real data**
 ```
-I need one real, verifiable statistic about how common 
-or costly rental listing scams are — specifically for 
-people aged 18-29. The FTC publishes consumer fraud 
-data at ftc.gov/exploredata. Point me to the right 
-dataset and tell me what number to look for.
+I need one real, verifiable statistic about how common or costly rental listing scams are — specifically for people aged 18-29. The FTC publishes consumer fraud data at ftc.gov/exploredata. Point me to the right dataset and tell me what number to look for.
 ```
 
 When you finish Step 4 you have: a specific person, a specific moment of failure, and a real number that proves it's not an edge case. That's the problem statement sentence. Run the same logic on your domain.
@@ -238,6 +225,18 @@ The output improved not because you found better words — because you gave it a
 ### NotebookLM
 
 While one person runs the revision in Gemini, have another team member open NotebookLM and upload one article from your domain's reading list. Ask it the same Step 1 question. Compare what it says to what Gemini said.
+
+### Adversarial round
+
+Now make Gemini disagree with itself. Take your revised Step 1 output and run this prompt:
+
+```
+Why might this NOT actually be a widespread problem? Make the strongest case you can that the pain point my team identified is overstated, rare, or already solved.
+```
+
+Read what it says. If it finds a real hole in your framing, fix it. If it's grasping — that's useful too. It means your problem statement is solid. Either way, you've stress-tested it before committing to it.
+
+This is the lesson: AI isn't an oracle. It's responsive to framing. The same tool that validated your problem can poke holes in it. That's a feature, not a bug.
 
 ### End of day
 

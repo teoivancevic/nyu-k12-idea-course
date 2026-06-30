@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useMemo, useState } from "react"
 import { Check, Copy } from "lucide-react"
-import { createPortal } from "react-dom"
 
 function CopyButton({ code }: { code: string }) {
   const [copied, setCopied] = useState(false)
@@ -33,71 +32,69 @@ function CopyButton({ code }: { code: string }) {
   )
 }
 
+function CodeBlock({ code, language }: { code: string; language: string }) {
+  return (
+    <div className="relative my-4 rounded-xl border border-border bg-muted/50 overflow-hidden">
+      <div className="flex gap-3 p-4">
+        <pre className="!m-0 !border-0 !rounded-none !bg-transparent flex-1 min-w-0">
+          <code className="block text-sm leading-relaxed whitespace-pre-wrap break-words">
+            {code}
+          </code>
+        </pre>
+        <div className="shrink-0 pt-0.5">
+          <CopyButton code={code} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function MarkdownContent({ html }: { html: string }) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [codeBlocks, setCodeBlocks] = useState<
-    Array<{ element: HTMLElement; code: string; language: string }>
-  >([])
+  const parts = useMemo(() => {
+    const segments: Array<
+      { type: "html"; content: string } | { type: "code"; code: string; language: string }
+    > = []
 
-  useEffect(() => {
-    if (!containerRef.current) return
+    const regex = /<pre><code(?:\s+class="language-(\w+)")?>([\s\S]*?)<\/code><\/pre>/g
+    let lastIndex = 0
+    let match
 
-    const pres = containerRef.current.querySelectorAll("pre")
-    const blocks: typeof codeBlocks = []
-
-    pres.forEach((pre) => {
-      const codeEl = pre.querySelector("code")
-      if (!codeEl) return
-
-      const code = codeEl.textContent || ""
-      const langMatch = /language-(\w+)/.exec(codeEl.className || "")
-      const language = langMatch?.[1] || ""
-
-      pre.className =
-        "group relative my-4 rounded-xl border bg-muted/50 overflow-hidden"
-      codeEl.className = "block overflow-x-auto p-4 text-sm leading-relaxed"
-
-      const header = document.createElement("div")
-      header.className =
-        "flex items-center justify-between px-4 py-2 border-b border-border/50"
-      pre.insertBefore(header, pre.firstChild)
-
-      if (language) {
-        const langSpan = document.createElement("span")
-        langSpan.className = "text-xs text-muted-foreground font-mono"
-        langSpan.textContent = language
-        header.appendChild(langSpan)
+    while ((match = regex.exec(html)) !== null) {
+      if (match.index > lastIndex) {
+        segments.push({ type: "html", content: html.slice(lastIndex, match.index) })
       }
 
-      const buttonMount = document.createElement("span")
-      buttonMount.className = "ml-auto"
-      header.appendChild(buttonMount)
+      const language = match[1] || ""
+      const code = match[2]
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/\n/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
 
-      blocks.push({ element: buttonMount, code, language })
-    })
+      segments.push({ type: "code", code, language })
+      lastIndex = match.index + match[0].length
+    }
 
-    // Style links to open in new tab
-    const links = containerRef.current.querySelectorAll("a")
-    links.forEach((a) => {
-      if (a.hostname !== window.location.hostname) {
-        a.target = "_blank"
-        a.rel = "noopener noreferrer"
-      }
-    })
+    if (lastIndex < html.length) {
+      segments.push({ type: "html", content: html.slice(lastIndex) })
+    }
 
-    setCodeBlocks(blocks)
+    return segments
   }, [html])
 
   return (
-    <>
-      <div
-        ref={containerRef}
-        className="prose-custom"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-      {codeBlocks.map((block, i) =>
-        createPortal(<CopyButton code={block.code} />, block.element, `cb-${i}`),
+    <div className="prose-custom">
+      {parts.map((part, i) =>
+        part.type === "html" ? (
+          <div key={i} dangerouslySetInnerHTML={{ __html: part.content }} />
+        ) : (
+          <CodeBlock key={i} code={part.code} language={part.language} />
+        ),
       )}
-    </>
+    </div>
   )
 }

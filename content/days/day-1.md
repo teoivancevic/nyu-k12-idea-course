@@ -6,7 +6,7 @@ lectureMaterials:
     url: "https://docs.google.com/presentation/d/1wI2xk1OOhiLKKOnjTzmCpTMjbL6L0Rse/edit?usp=sharing&ouid=104677514528733065099&rtpof=true&sd=true"
   - label: "Problem Research & Domains"
     url: "https://docs.google.com/document/d/11ptcVDcJ7ILxyGLEJ4XHDP9cLqd-QQSqBbtaWh5GdNg/edit?usp=sharing"
-granolaNotesUrl: ""
+granolaNotesUrl: "https://notes.granola.ai/t/0a7c4e8a-45ca-47f7-9ce4-d7f780b0c688-008umkv4"
 workshopLinks:
   - label: "Worksheet"
     url: "https://docs.google.com/document/d/1N0sxwjlnORkmiZ3vu5ZEbWOlMB9uDV6R/edit?usp=drive_link&ouid=104677514528733065099&rtpof=true&sd=true"
@@ -186,6 +186,10 @@ General-purpose AI assistant. Your main tool for research, brainstorming, and it
 
 What it's good at: exploring a problem space fast, generating options, drafting and refining.
 What to watch: it will sound confident about things it's wrong about. Always check numbers against the actual source.
+
+*It can also generate images that make absolutely no sense — like Messi celebrating in a Croatia jersey while Luka Modric cries on the ground in an Argentina kit.*
+
+![AI-generated image of Messi in a Croatia jersey celebrating while Luka Modric sits crying on the ground in an Argentina jersey](/gemini-messi-croatia.png)
 
 → [gemini.google.com](https://gemini.google.com)
 

@@ -17,11 +17,15 @@ function slugify(text: string): string {
 
 function addHeadingIds(html: string): { html: string; headings: TocItem[] } {
   const headings: TocItem[] = []
+  const seen = new Map<string, number>()
   const processed = html.replace(
     /<(h[23])>(.*?)<\/\1>/g,
     (_match, tag: string, content: string) => {
       const text = content.replace(/<[^>]+>/g, "")
-      const id = slugify(text)
+      const base = slugify(text)
+      const count = seen.get(base) ?? 0
+      seen.set(base, count + 1)
+      const id = count === 0 ? base : `${base}-${count}`
       const level = tag === "h2" ? 2 : 3
       headings.push({ id, text, level })
       return `<${tag} id="${id}">${content}</${tag}>`

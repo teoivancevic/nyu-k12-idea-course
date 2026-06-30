@@ -44,8 +44,8 @@ export function TableOfContents({ items }: { items: TocItem[] }) {
         On this page
       </p>
       <ul className="space-y-1">
-        {items.map((item) => (
-          <li key={item.id}>
+        {items.map((item, i) => (
+          <li key={`${item.id}-${i}`}>
             <a
               href={`#${item.id}`}
               onClick={(e) => {

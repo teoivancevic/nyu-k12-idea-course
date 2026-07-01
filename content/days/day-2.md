@@ -73,7 +73,7 @@ Take your sentence from yesterday and paste it into section 1. Don't try to perf
 You already know who from yesterday. Today add the scale — an actual number, even a rough one.
 
 ```
-I'm working on [your domain and pain point]. I already know the specific person affected is [from your Step 1-2 work]. Now I need scale: roughly how many people like this exist in [city / nationally]? Give me a real number from a named source, not an estimate.
+I'm working on [your domain and pain point]. I already know the specific person affected is [from your Step 1-2 work]. Now I need scale: roughly how many people like this exist in [city / nationally]? Give me one real number from a named source. One sentence, no elaboration.
 ```
 
 ---
@@ -83,7 +83,7 @@ I'm working on [your domain and pain point]. I already know the specific person 
 You identified the existing attempt in yesterday's domain reading. Now say specifically what it gets wrong — not just that it's imperfect.
 
 ```
-The existing attempt at our problem is [the chatbot / ACCESS NYC / FAFSA / Craigslist filtering — whichever fits]. What specifically does it fail to do for [your specific person from section 2]? Be concrete about the gap — what does that person need that this doesn't give them?
+The existing attempt at our problem is [the chatbot / ACCESS NYC / FAFSA / Craigslist filtering — whichever fits]. What specifically does it fail to do for [your specific person from section 2]? Answer in 2-3 sentences. Be concrete about the gap — what does that person need that this doesn't give them?
 ```
 
 ---
@@ -93,7 +93,7 @@ The existing attempt at our problem is [the chatbot / ACCESS NYC / FAFSA / Craig
 You have one data point from yesterday. Find a second one today — different angle, same domain.
 
 ```
-I already have this data point: [your fact + source]. What's a second concrete number that strengthens the case from a different angle? Point me to a specific dataset or report and tell me exactly what to look for.
+I already have this data point: [your fact + source]. What's a second concrete number that strengthens the case from a different angle? Give me one number, one source, one sentence on why it matters. Nothing else.
 ```
 
 Check both numbers against the actual source before they go in the doc.
@@ -105,7 +105,7 @@ Check both numbers against the actual source before they go in the doc.
 Who actually pays the cost when this goes unsolved — and what does that cost look like?
 
 ```
-When [your problem] goes unsolved, who pays the cost? Think beyond the obvious — what are the second-order effects? Who else feels it?
+When [your problem] goes unsolved, who pays the cost? Think beyond the obvious — what are the second-order effects? Answer in 2-3 sentences maximum.
 ```
 
 ---
@@ -115,7 +115,7 @@ When [your problem] goes unsolved, who pays the cost? Think beyond the obvious �
 One or two honest open questions you'd need answered before you could build a real solution. You're not expected to have everything figured out.
 
 ```
-Here's our problem statement so far: [paste your doc]. What's the most important thing we still don't know that would change our approach if we found the answer?
+Here's our problem statement so far: [paste your doc]. What's the most important thing we still don't know that would change our approach if we found the answer? Give me one or two questions, one sentence each.
 ```
 
 ---
@@ -125,7 +125,7 @@ Here's our problem statement so far: [paste your doc]. What's the most important
 Once all six sections are done, come back to section 1 and rewrite the sentence.
 
 ```
-Here are our six sections: [paste the full doc]. Rewrite our headline as one tight sentence using this format: [Specific group] struggle with [specific pain point] because [specific reason], and current solutions fail because [specific gap].
+Here are our six sections: [paste the full doc]. Rewrite our headline as one tight sentence using this format: [Specific group] struggle with [specific pain point] because [specific reason], and current solutions fail because [specific gap]. One sentence only.
 ```
 
 ---

@@ -22,7 +22,7 @@ export const courseConfig = {
       date: "July 1",
       weekday: "Wed",
       theme: "Public service + AI",
-      available: false,
+      available: true,
     },
     {
       week: 1,

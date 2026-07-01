@@ -10,6 +10,8 @@ lectureMaterials:
     url: "https://docs.google.com/document/d/1kbFtZjBkYcBykgiRlygZ4kBXfM9PxmUiUSIoK7rItwY/edit?usp=sharing"
 granolaNotesUrl: ""
 workshopLinks:
+  - label: "Tomorrow's Speaker — Lucas Allner"
+    url: "https://www.linkedin.com/in/lucas-allner/"
   - label: "Day 2 Workshop Template"
     url: "https://docs.google.com/document/d/1p2Wf82eN-07F6HKAWIT3SfERj-A1Q-zI/edit?usp=sharing&ouid=104677514528733065099&rtpof=true&sd=true"
   - label: "Google Gemini"

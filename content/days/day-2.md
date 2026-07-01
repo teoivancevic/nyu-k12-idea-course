@@ -18,7 +18,9 @@ workshopLinks:
     url: "https://notebooklm.google.com"
   - label: "Day 1 Workshop"
     url: "/day/1"
-advancedLinks: []
+advancedLinks:
+  - label: "YC: How to Talk to Users — Eric Migicovsky (2019)"
+    url: "https://www.youtube.com/watch?v=MT4Ig2uqjTc"
 actionItems:
   - "Form your team of 3 and pick your domain"
   - "Fill out the Day 2 problem statement doc together"
@@ -132,7 +134,129 @@ Here are our six sections: [paste the full doc]. Rewrite our headline as one tig
 
 ## How to Run a Stakeholder Interview
 
-*Content coming soon.*
+Tomorrow you'll interview a real industry guest — someone who works in or around the problem your team has been researching. This is probably the first time you've done something like this. That's fine. Here's everything you need.
+
+---
+
+### What an Interview Is For
+
+You've been working with data. Data tells you *what* is happening — how many people, how often, what the numbers say.
+
+An interview tells you *why* — and what it actually feels like to be the person inside your problem statement.
+
+Those two things together are what make a pitch convincing. Anyone can find a statistic. Not everyone can explain why the problem feels the way it does to the people living it.
+
+---
+
+### People Don't Say the Real Thing First
+
+This is the most important thing to know going into an interview.
+
+Ask someone "what's difficult about this?" and you'll almost always get a safe, surface-level answer:
+
+> *"It's complicated."*
+> *"The process takes a long time."*
+> *"There's a lot of paperwork."*
+
+These answers aren't wrong. But they're not the whole story. People give you the easy answer first because they don't know you yet, and they don't know what you're going to do with what they say.
+
+The real answer — the one that actually helps you — usually sounds more like:
+
+> *"I didn't know who to call and I was too embarrassed to ask."*
+> *"I was scared of making a mistake that would affect my whole family."*
+> *"I felt like the system assumed I already knew things I didn't know."*
+
+Your job in an interview is to get to that second kind of answer. You do that by asking good questions, listening carefully, and following up on the things that sound interesting — not moving on to the next question on your list.
+
+---
+
+### How to Structure It: Open, Explore, Close
+
+**Open (3–4 min)**
+
+Don't start with your questions. Start with a brief introduction and make the person feel comfortable.
+
+- Say your name, where you're from, and what program you're in
+- Explain what your team is working on in one sentence
+- Say clearly: *"We're not here to pitch anything — we just want to learn from your experience"*
+
+That last line matters. It tells them you're listening, not selling.
+
+**Explore (10–15 min)**
+
+This is the main part. A few simple rules:
+
+**Ask about what actually happened, not what they would do.**
+
+The most useful questions are about real past experiences, not hypothetical ones.
+
+Instead of: *"Would you use a tool that helped with this?"*
+Ask: *"Can you tell me about the last time you had to deal with this problem?"*
+
+Instead of: *"Do you think this is a big issue?"*
+Ask: *"Walk me through what actually happens when this goes wrong."*
+
+**Look for the moment things break down.**
+
+There's usually one specific step in a process where people get stuck, give up, or have to figure it out themselves. That's the most useful thing to find. Listen for phrases like "that's when it gets complicated" or "usually I just..." — those are signals to follow.
+
+**Follow the interesting thing, not your script.**
+
+If they say something surprising or emotional, go there. Don't just move to the next question. Say: *"Can you tell me more about that?"* or *"What did that feel like?"*
+
+**Two simple techniques that help:**
+
+*Repeat the last few words as a question.* It sounds simple, but it works.
+
+> Them: "The whole process just feels really overwhelming."
+> You: "Overwhelming?"
+> Them: *[explains exactly what's overwhelming and why]*
+
+*Name the feeling you think you're hearing.*
+> "That sounds really stressful."
+> "It seems like that put you in a difficult position."
+
+If you get it wrong, they'll correct you. If you get it right, they'll open up.
+
+**Close (<1 min)**
+
+- Thank them for something specific they said, not just "thank you for your time"
+- Ask if there's anyone else they'd suggest you talk to
+- That's it — keep it short
+
+---
+
+### Before the Interview: Write Your Questions Down
+
+Since you'll be speaking in English and may be nervous, having your questions written in advance matters. You don't have to follow them exactly — but they're your backup if you get stuck.
+
+Use this prompt to help your team prepare:
+
+```
+Here is our problem statement: [paste it]. We're interviewing someone with experience in [civic tech / government / nonprofit]. We want to understand: [paste section 6 — what you still don't know]. Write two interview questions for us. Each question should: be about real past experience not hypothetical, be specific to our problem area, be open-ended and not answerable with just yes or no, take about 2-3 minutes to answer. One sentence each. Nothing else.
+```
+
+---
+
+### What a Bad Question Looks Like
+
+Before tomorrow, check each of your questions:
+
+- Does it have a yes/no answer? → rewrite it
+- Does it start with "would you ever..." or "do you think..."? → make it past tense
+- Is it so broad that anyone could answer it the same way? → make it more specific
+
+**Bad:** *"Do you think AI could help people in this situation?"*
+**Better:** *"Has your organization tried using any tools to help with this? What happened?"*
+
+**Bad:** *"How often does this problem affect people?"*
+**Better:** *"Tell me about a specific time you saw this go wrong for someone."*
+
+---
+
+### The One Rule
+
+Listen more than you talk. If you're filling silence, you're doing it wrong. Give people time to think — the best answers often come after a pause.
 
 ---
 

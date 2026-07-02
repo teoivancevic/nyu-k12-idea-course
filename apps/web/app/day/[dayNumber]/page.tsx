@@ -8,7 +8,7 @@ import { PromptTabs } from "@/components/prompt-tabs"
 import { TableOfContents, type TocItem } from "@/components/table-of-contents"
 import { ActionItemsSidebar } from "@/components/action-items-sidebar"
 import { Card, CardContent } from "@workspace/ui/components/card"
-import { Lock, Mic, ExternalLink } from "lucide-react"
+import { Lock } from "lucide-react"
 
 export function generateStaticParams() {
   return Array.from({ length: courseConfig.schedule.length }, (_, i) => ({
@@ -90,28 +90,9 @@ export default async function DayPage({
             <span className="mx-1.5 opacity-30">·</span>
             {scheduleDay.theme}
           </p>
-          <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="font-[family-name:var(--font-heading-var)] text-2xl sm:text-3xl font-bold tracking-tight">
-              {day.frontmatter.title}
-            </h1>
-            {day.frontmatter.granolaNotesUrl ? (
-              <a
-                href={day.frontmatter.granolaNotesUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/10"
-              >
-                <Mic className="size-3" />
-                Granola Notes
-                <ExternalLink className="size-3" />
-              </a>
-            ) : (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground cursor-not-allowed">
-                <Mic className="size-3" />
-                Granola Notes
-              </span>
-            )}
-          </div>
+          <h1 className="font-[family-name:var(--font-heading-var)] text-2xl sm:text-3xl font-bold tracking-tight">
+            {day.frontmatter.title}
+          </h1>
         </div>
 
         <QuickLinksRow frontmatter={day.frontmatter} />

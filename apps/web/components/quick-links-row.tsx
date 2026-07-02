@@ -5,11 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/card"
-import { Badge } from "@workspace/ui/components/badge"
 import {
   FileText,
   Wrench,
   BookOpen,
+  Mic,
   ExternalLink,
 } from "lucide-react"
 
@@ -25,7 +25,7 @@ function LinkCard({
   return (
     <Card className="flex-1 min-w-0">
       <CardHeader className="p-3 pb-1">
-        <CardTitle className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+        <CardTitle className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
           <Icon className="size-3.5" />
           {title}
         </CardTitle>
@@ -35,91 +35,85 @@ function LinkCard({
   )
 }
 
+function LinkList({
+  links,
+  placeholder,
+}: {
+  links: { label: string; url: string }[]
+  placeholder?: string
+}) {
+  if (links.length === 0) {
+    return <p className="text-xs text-muted-foreground">{placeholder}</p>
+  }
+  return (
+    <div className="space-y-1.5">
+      {links.map((link) => (
+        <a
+          key={link.url}
+          href={link.url}
+          target={link.url.startsWith("/") ? undefined : "_blank"}
+          rel={link.url.startsWith("/") ? undefined : "noopener noreferrer"}
+          className="flex items-center gap-1.5 text-sm text-primary hover:underline"
+        >
+          <span className="truncate">{link.label}</span>
+          <ExternalLink className="size-3 shrink-0" />
+        </a>
+      ))}
+    </div>
+  )
+}
+
 export function QuickLinksRow({
   frontmatter,
 }: {
   frontmatter: DayFrontmatter
 }) {
-  const hasWorkshopLinks =
-    frontmatter.workshopLinks && frontmatter.workshopLinks.length > 0
   const hasAdvancedLinks =
     frontmatter.advancedLinks && frontmatter.advancedLinks.length > 0
+
+  const lectureMaterials = frontmatter.lectureMaterials?.length
+    ? frontmatter.lectureMaterials
+    : frontmatter.lectureSlides
+      ? [{ label: "View slides", url: frontmatter.lectureSlides }]
+      : []
+
+  const workshopLinks = frontmatter.workshopLinks ?? []
 
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-8">
       <LinkCard icon={FileText} title="Lecture Materials">
-        {frontmatter.lectureMaterials &&
-        frontmatter.lectureMaterials.length > 0 ? (
-          <div className="space-y-1">
-            {frontmatter.lectureMaterials.map((mat) => (
-              <a
-                key={mat.url}
-                href={mat.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-sm text-primary hover:underline"
-              >
-                {mat.label} <ExternalLink className="size-3" />
-              </a>
-            ))}
-          </div>
-        ) : frontmatter.lectureSlides ? (
-          <a
-            href={frontmatter.lectureSlides}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-          >
-            View slides <ExternalLink className="size-3" />
-          </a>
-        ) : (
-          <p className="text-xs text-muted-foreground">
-            Slides will be posted before class
-          </p>
-        )}
+        <LinkList
+          links={lectureMaterials}
+          placeholder="Slides will be posted before class"
+        />
       </LinkCard>
 
       <LinkCard icon={Wrench} title="Workshop Tools">
-        {hasWorkshopLinks ? (
-          <div className="flex flex-wrap gap-1.5">
-            {frontmatter.workshopLinks!.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Badge
-                  variant="secondary"
-                  className="text-xs hover:bg-primary/10 hover:text-primary transition-colors cursor-pointer"
-                >
-                  {link.label}
-                </Badge>
-              </a>
-            ))}
-          </div>
+        <LinkList
+          links={workshopLinks}
+          placeholder="No tools listed yet"
+        />
+      </LinkCard>
+
+      <LinkCard icon={Mic} title="Granola Notes">
+        {frontmatter.granolaNotesUrl ? (
+          <a
+            href={frontmatter.granolaNotesUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm text-primary hover:underline"
+          >
+            <span>View notes</span>
+            <ExternalLink className="size-3 shrink-0" />
+          </a>
         ) : (
-          <p className="text-xs text-muted-foreground">
-            No tools listed yet
-          </p>
+          <p className="text-xs text-muted-foreground">Notes will appear after class</p>
         )}
       </LinkCard>
 
       {hasAdvancedLinks && (
         <LinkCard icon={BookOpen} title="Advanced Reading">
-          <div className="space-y-1">
-            {frontmatter.advancedLinks!.map((link) => (
-              <a
-                key={link.url}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-xs text-primary hover:underline truncate"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          <LinkList links={frontmatter.advancedLinks!} />
         </LinkCard>
       )}
     </div>

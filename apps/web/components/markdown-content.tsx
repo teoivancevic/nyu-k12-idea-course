@@ -34,16 +34,19 @@ function CopyButton({ code }: { code: string }) {
 
 function CodeBlock({ code, language }: { code: string; language: string }) {
   return (
-    <div className="relative my-4 rounded-xl border border-border bg-muted/50 overflow-hidden">
-      <div className="flex gap-3 p-4">
-        <pre className="!m-0 !border-0 !rounded-none !bg-transparent flex-1 min-w-0">
-          <code className="block text-sm leading-relaxed whitespace-pre-wrap break-words">
+    <div className="relative my-4 rounded-xl border border-primary/20 bg-primary/5 overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-primary/10">
+        <span className="text-xs font-medium text-primary/60 uppercase tracking-wide">
+          {language || "Prompt"}
+        </span>
+        <CopyButton code={code} />
+      </div>
+      <div className="p-4">
+        <pre className="!m-0 !border-0 !rounded-none !bg-transparent">
+          <code className="block text-sm leading-relaxed whitespace-pre-wrap break-words text-foreground/90">
             {code}
           </code>
         </pre>
-        <div className="shrink-0 pt-0.5">
-          <CopyButton code={code} />
-        </div>
       </div>
     </div>
   )

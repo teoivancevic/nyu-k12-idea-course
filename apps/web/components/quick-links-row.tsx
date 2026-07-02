@@ -56,8 +56,8 @@ function LinkList({
           className="flex items-center gap-2 text-sm text-primary hover:underline"
         >
           <FaviconImg url={link.url} />
-          <span className="truncate">{link.label}</span>
-          <ExternalLink className="size-3 shrink-0 ml-auto opacity-40" />
+          <span className="flex-1 leading-snug">{link.label}</span>
+          <ExternalLink className="size-3 shrink-0 opacity-40" />
         </a>
       ))}
     </div>
@@ -81,7 +81,7 @@ export function QuickLinksRow({
   const workshopLinks = frontmatter.workshopLinks ?? []
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-8">
+    <div className="grid gap-3 sm:grid-cols-2 mb-8">
       <LinkCard icon={FileText} title="Lecture Materials">
         <LinkList
           links={lectureMaterials}

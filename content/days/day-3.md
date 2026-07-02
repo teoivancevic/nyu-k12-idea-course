@@ -127,6 +127,39 @@ gave me. Are they in the same order of magnitude? If not, which
 of my assumptions was probably wrong?
 ```
 
+### Step 5 · Generate Your Worksheet Summary
+
+Once you've run all four steps, paste this prompt into the same conversation to generate text you can copy directly into your worksheet:
+
+```
+Based on everything we just worked through, write a completed Part A worksheet summary I can paste in. Use exactly this format:
+
+Part A — Size Your Market
+
+Step 1 · TAM — Total Addressable Market
+Everyone, anywhere, who could ever conceivably need this.
+Number or range: [fill in]
+How you got there + source: [fill in]
+
+Step 2 · SAM — Serviceable Available Market
+Narrowed by your real constraints: location, eligibility, language, device access.
+Number or range: [fill in]
+What you cut and why: [fill in]
+
+Step 3 · SOM — Serviceable Obtainable Market
+Who you could realistically reach in year one, given your team size, budget, and channels.
+Number or range: [fill in]
+Key assumptions: [fill in]
+
+Step 4 · Sanity Check
+Find a real comparable product or program. Compare their actual user numbers to your SOM. Do they match? If not, what assumption was wrong?
+Comparable: [fill in]
+Their actual numbers + source: [fill in]
+Does your SOM hold up? [fill in]
+
+Fill in every field with our actual numbers and reasoning. One sentence per field — no bullet points, no extra explanation.
+```
+
 ---
 
 ## Guest Speaker

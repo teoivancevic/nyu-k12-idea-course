@@ -8,7 +8,7 @@ lectureMaterials:
     url: "https://docs.google.com/document/d/1TmnrQ3PKjIWS3Q3e5oSWXCeHQiMRwi_hBDKHsFY80po/edit?usp=sharing"
   - label: "Case Handout"
     url: "https://docs.google.com/document/d/1kbFtZjBkYcBykgiRlygZ4kBXfM9PxmUiUSIoK7rItwY/edit?usp=sharing"
-granolaNotesUrl: ""
+granolaNotesUrl: "https://notes.granola.ai/t/4e8dbd3a-3e0c-4f79-a320-b7076e068946-009c2hma"
 workshopLinks:
   - label: "Tomorrow's Speaker — Lucas Allner"
     url: "https://www.linkedin.com/in/lucas-allner/"

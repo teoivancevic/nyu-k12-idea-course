@@ -10,6 +10,8 @@ granolaNotesUrl: ""
 workshopLinks:
   - label: "Days 3–4 Worksheet"
     url: "https://docs.google.com/document/d/1Gj4Q-14mBXzAaiSOEa-q3cAmtrzu9q06/edit?usp=sharing&ouid=104677514528733065099&rtpof=true&sd=true"
+  - label: "Differentiation Mapper"
+    url: "https://nyu-ds-sp26-differentiation-mapper.vercel.app/"
   - label: "Google Gemini"
     url: "https://gemini.google.com"
   - label: "NotebookLM"
@@ -38,19 +40,23 @@ Before you can map the competitive space, you need to know who's in it. Don't tr
 
 ### Step 1 — Seed Gemini with your problem
 
-Start a new Gemini conversation and paste everything in one shot:
+Open a new Gemini conversation. Copy and paste your entire Day 2 problem statement doc — all six sections — as the first message. Then run this prompt in the same conversation:
 
 ```
-Here is our problem statement: [paste it]. Our domain is [your domain]. Our target user is [from your Day 2 doc — who and how many]. Find me 5-10 real competitors for a solution to this problem. Include: direct competitors (same solution, same problem), indirect competitors (different solution, same problem), and any relevant government programs, nonprofits, or existing tools that already attempt to solve this. For each one, give me: name, one sentence on what they do, and which type of competitor they are (direct / indirect). Nothing else yet.
+Based on everything above, find me 5-10 real competitors for a solution to this problem. Include: direct competitors (same solution, same problem), indirect competitors (different solution, same problem), and any relevant government programs, nonprofits, or existing tools that already attempt to solve this. For each one give me: name, one sentence on what they do, and which type of competitor they are. Nothing else yet.
 ```
 
 ### Step 2 — Deep research on each competitor
 
-Once you have the list, run this in the same conversation:
+In the same conversation, no need to re-paste anything:
 
 ```
-Now do deep research on each of those competitors. For each one, find: who they serve (individuals, institutions, government), how they make money (subscription, grant, government contract, free/ad-supported), what they optimize for (engagement, outcomes, reach, compliance), who decides to adopt them (individual choice vs. institutional decision), and rough scale if available (users, cities, funding amount). Cite a source for any specific number you give me. Be thorough — I'm going to use this to map them on a strategy matrix.
+Now do deep research on each of those competitors. For each one find: who they serve (individuals, institutions, government), how they make money (subscription, grant, government contract, free/ad-supported), what they optimize for (engagement, outcomes, reach, compliance), who decides to adopt them (individual choice vs. institutional decision), and rough scale if available (users, cities, funding amount). Cite a source for any specific number. Be thorough — I'm going to use this to map them on a strategy matrix.
 ```
+
+### Step 3 — Run the Differentiation Mapper
+
+Still in the same conversation, copy the prompt from the [Differentiation Mapper](https://nyu-ds-sp26-differentiation-mapper.vercel.app/) tool page and paste it as your next message. Then copy the JSON output and paste it into the tool to generate your maps.
 
 ---
 

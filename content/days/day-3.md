@@ -58,19 +58,74 @@ Now do deep research on each of those competitors. For each one find: who they s
 
 Still in the same conversation, copy the prompt from the [Differentiation Mapper](https://nyu-ds-sp26-differentiation-mapper.vercel.app/) tool page and paste it as your next message. Then copy the JSON output and paste it into the tool to generate your maps.
 
+### Step 4 — Fill in your worksheet
+
+Open your Days 3–4 Worksheet and complete Part B using what you just found:
+
+- Copy your competitor list (names, types, one-line descriptions) into the competitor table
+- Note which competitors overlap with your target users and problem framing
+- Use your differentiation maps to identify where existing solutions fall short
+- Write 2–3 sentences on the gap your solution could fill — this is the "white space" you're building into
+
+Don't skip this step. The worksheet is what Day 5 builds on.
+
 ---
 
 ## Part 2: Market Sizing
 
 *This section runs in the afternoon workshop, 1–2pm.*
 
-You sized a fictional market this morning with the professor. Now run the same four steps on your own problem.
+## Part A: Size Your Market
 
-Use the Gemini prompts from the Student Task doc — the four steps are already written out for you. Swap in your own problem statement and constraints.
+Use the four prompts below — they're the same ones from the professor's morning session, with your problem swapped in. Run them in a new Gemini conversation, in order.
 
-One reminder: for public service problems, your SOM is often capped by a contract or grant budget, not by the total number of people who need this. Name that honestly in your worksheet — it's a real finding, not a weakness.
+A few reminders as you go:
+
+- **Don't pitch your TAM as your SOM.** The professor covered this — it's the classic mistake.
+- **For public service problems, your SOM is often capped by a contract or grant**, not by total demand. Name that honestly in your worksheet.
+- **Sanity-check step is not optional.** Compare your SOM against a real comparable — you already found competitors, use one of them.
 
 Fill in Part A of your worksheet as you go. One sentence per number. No essay.
+
+---
+
+### Step 1 · TAM
+
+```
+I'm sizing the market for [your solution, one sentence]. Estimate 
+the Total Addressable Market: how many people, anywhere, could ever 
+conceivably want or need this. Show your reasoning step by step, 
+and give me a range, not a single number.
+```
+
+### Step 2 · SAM
+
+```
+From that same population, narrow it to the Serviceable Available 
+Market: people who actually match [your real constraints: location, 
+eligibility, access to a device or the internet, language, and so on]. 
+Roughly what percentage of the TAM does this represent, and explain 
+your reasoning.
+```
+
+### Step 3 · SOM
+
+```
+Now estimate the Serviceable Obtainable Market: realistically, what 
+share of that SAM could a solution like ours reach in year one, given 
+[your real constraints: team size, budget, existing competitors]? 
+Walk me through your assumptions.
+```
+
+### Step 4 · Sanity Check
+
+```
+Find a real, comparable product or program serving a similar 
+population and tell me its actual reported user numbers or reach, 
+with a source. Compare that number to the SOM estimate you just 
+gave me. Are they in the same order of magnitude? If not, which 
+of my assumptions was probably wrong?
+```
 
 ---
 

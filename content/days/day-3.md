@@ -132,32 +132,31 @@ of my assumptions was probably wrong?
 Once you've run all four steps, paste this prompt into the same conversation to generate text you can copy directly into your worksheet:
 
 ```
-Based on everything we just worked through, write a completed Part A worksheet summary I can paste in. Use exactly this format:
+Based on everything we just worked through, write a completed Part A worksheet summary I can copy and paste. Format it as a clearly separated block — use a line of dashes (---) before and after the whole thing so it's easy to find. Use exactly this structure, replacing every bracketed field with our actual numbers and reasoning. One sentence per field, no bullet points, no extra explanation.
 
-Part A — Size Your Market
+---
+PART A — SIZE YOUR MARKET
 
-Step 1 · TAM — Total Addressable Market
+STEP 1 · TAM — Total Addressable Market
 Everyone, anywhere, who could ever conceivably need this.
 Number or range: [fill in]
 How you got there + source: [fill in]
 
-Step 2 · SAM — Serviceable Available Market
+STEP 2 · SAM — Serviceable Available Market
 Narrowed by your real constraints: location, eligibility, language, device access.
 Number or range: [fill in]
 What you cut and why: [fill in]
 
-Step 3 · SOM — Serviceable Obtainable Market
+STEP 3 · SOM — Serviceable Obtainable Market
 Who you could realistically reach in year one, given your team size, budget, and channels.
 Number or range: [fill in]
 Key assumptions: [fill in]
 
-Step 4 · Sanity Check
-Find a real comparable product or program. Compare their actual user numbers to your SOM. Do they match? If not, what assumption was wrong?
+STEP 4 · Sanity Check
 Comparable: [fill in]
 Their actual numbers + source: [fill in]
 Does your SOM hold up? [fill in]
-
-Fill in every field with our actual numbers and reasoning. One sentence per field — no bullet points, no extra explanation.
+---
 ```
 
 ---

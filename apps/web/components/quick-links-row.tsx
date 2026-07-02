@@ -23,7 +23,7 @@ function LinkCard({
   children: React.ReactNode
 }) {
   return (
-    <Card className="flex-1 min-w-0">
+    <Card className="h-full">
       <CardHeader className="p-3 pb-1">
         <CardTitle className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
           <Icon className="size-3.5" />
@@ -81,25 +81,31 @@ export function QuickLinksRow({
   const workshopLinks = frontmatter.workshopLinks ?? []
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 mb-8">
-      <LinkCard icon={FileText} title="Lecture Materials">
-        <LinkList
-          links={lectureMaterials}
-          placeholder="Slides will be posted before class"
-        />
-      </LinkCard>
+    <div className="flex gap-3 mb-8 items-start">
+      <div className="shrink-0">
+        <LinkCard icon={FileText} title="Lecture Materials">
+          <LinkList
+            links={lectureMaterials}
+            placeholder="Slides will be posted before class"
+          />
+        </LinkCard>
+      </div>
 
-      <LinkCard icon={Wrench} title="Workshop Tools">
-        <LinkList
-          links={workshopLinks}
-          placeholder="No tools listed yet"
-        />
-      </LinkCard>
+      <div className="flex-1 min-w-0">
+        <LinkCard icon={Wrench} title="Workshop Tools">
+          <LinkList
+            links={workshopLinks}
+            placeholder="No tools listed yet"
+          />
+        </LinkCard>
+      </div>
 
       {hasAdvancedLinks && (
-        <LinkCard icon={BookOpen} title="Advanced Reading">
-          <LinkList links={frontmatter.advancedLinks!} />
-        </LinkCard>
+        <div className="flex-1 min-w-0">
+          <LinkCard icon={BookOpen} title="Advanced Reading">
+            <LinkList links={frontmatter.advancedLinks!} />
+          </LinkCard>
+        </div>
       )}
     </div>
   )

@@ -8,7 +8,7 @@ import { PromptTabs } from "@/components/prompt-tabs"
 import { TableOfContents, type TocItem } from "@/components/table-of-contents"
 import { ActionItemsSidebar } from "@/components/action-items-sidebar"
 import { Card, CardContent } from "@workspace/ui/components/card"
-import { Lock } from "lucide-react"
+import { Lock, Mic, ExternalLink } from "lucide-react"
 
 export function generateStaticParams() {
   return Array.from({ length: courseConfig.schedule.length }, (_, i) => ({
@@ -90,9 +90,26 @@ export default async function DayPage({
             <span className="mx-1.5 opacity-30">·</span>
             {scheduleDay.theme}
           </p>
-          <h1 className="font-[family-name:var(--font-heading-var)] text-2xl sm:text-3xl font-bold tracking-tight">
+          <h1 className="font-[family-name:var(--font-heading-var)] text-2xl sm:text-3xl font-bold tracking-tight mb-3">
             {day.frontmatter.title}
           </h1>
+          {day.frontmatter.granolaNotesUrl ? (
+            <a
+              href={day.frontmatter.granolaNotesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              <Mic className="size-4" />
+              Granola Notes
+              <ExternalLink className="size-3.5" />
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground/50">
+              <Mic className="size-4" />
+              Granola Notes — posted after class
+            </span>
+          )}
         </div>
 
         <QuickLinksRow frontmatter={day.frontmatter} />

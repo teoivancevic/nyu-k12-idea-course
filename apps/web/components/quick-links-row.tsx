@@ -9,7 +9,6 @@ import {
   FileText,
   Wrench,
   BookOpen,
-  Mic,
   ExternalLink,
 } from "lucide-react"
 
@@ -93,22 +92,6 @@ export function QuickLinksRow({
           links={workshopLinks}
           placeholder="No tools listed yet"
         />
-      </LinkCard>
-
-      <LinkCard icon={Mic} title="Granola Notes">
-        {frontmatter.granolaNotesUrl ? (
-          <a
-            href={frontmatter.granolaNotesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-primary hover:underline"
-          >
-            <span>View notes</span>
-            <ExternalLink className="size-3 shrink-0" />
-          </a>
-        ) : (
-          <p className="text-xs text-muted-foreground">Notes will appear after class</p>
-        )}
       </LinkCard>
 
       {hasAdvancedLinks && (

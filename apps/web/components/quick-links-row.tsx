@@ -11,6 +11,7 @@ import {
   BookOpen,
   ExternalLink,
 } from "lucide-react"
+import { FaviconImg } from "./favicon-img"
 
 function LinkCard({
   icon: Icon,
@@ -52,10 +53,11 @@ function LinkList({
           href={link.url}
           target={link.url.startsWith("/") ? undefined : "_blank"}
           rel={link.url.startsWith("/") ? undefined : "noopener noreferrer"}
-          className="flex items-center gap-1.5 text-sm text-primary hover:underline"
+          className="flex items-center gap-2 text-sm text-primary hover:underline"
         >
+          <FaviconImg url={link.url} />
           <span className="truncate">{link.label}</span>
-          <ExternalLink className="size-3 shrink-0" />
+          <ExternalLink className="size-3 shrink-0 ml-auto opacity-40" />
         </a>
       ))}
     </div>

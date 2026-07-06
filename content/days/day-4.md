@@ -35,21 +35,110 @@ actionItems:
 
 ## Part 1: Finish the Business Model Canvas
 
-This morning the professor walked through the Business Model Canvas for public sector problems. Now build yours using Part C of your Day 3–4 worksheet.
+The professor just walked through all six blocks. Now build yours.
 
-Use what you found in Day 3 — your market sizing, competitor sort, and differentiation map should all inform what you write here.
+**Before you start:** open a new Gemini conversation. Paste in this order:
+1. Your complete Day 1 worksheet
+2. Your complete Day 2 problem statement doc
+3. Your Day 3–4 worksheet with everything from Day 3 filled in and Day 4 empty
 
-The Gemini prompt for the hardest block — Who Pays:
+Then run each prompt below one at a time, in the same conversation. Fill in your worksheet as you go.
+
+---
+
+### Block 1 · Who You Serve
+
+This is already done — it's carried directly from your problem statement. Copy it from your Day 2 doc into the worksheet. No prompt needed.
+
+---
+
+### Block 2 · Who Pays
 
 ```
-For a solution to [paste your problem statement], who realistically 
-would pay to fund this: a government contract, a grant, a 
-subscription, or something else? Would that funding renew 
-automatically, or would we have to compete for it again each year? 
-Answer in 3–4 sentences.
+Based on everything above, who would realistically pay to fund 
+a solution to our problem — a government agency, a grant, a 
+nonprofit, a subscription, or something else?
+
+Is the payer the same person as the user, or different? 
+Why does that matter for how we'd build this?
+
+Two to three sentences. Be specific — name the type of funder, 
+not just "the government."
 ```
 
-Then do the reconcile check: does your Who Pays block match your SOM from Day 3? If your funding is one contract or grant, your SOM is probably capped by that budget, not by total demand. Say that on your slide — it's a real finding, not a weakness.
+---
+
+### Block 3 · Value Proposition
+
+```
+Write our value proposition in one sentence. Not a list of 
+features — one outcome the user would actually notice because 
+this exists.
+
+Format: "[Specific user] can now [do something they couldn't 
+do before / avoid something that used to hurt them]."
+```
+
+---
+
+### Block 4 · Key Partners & Channels
+
+```
+For a solution to our problem:
+- Who do we need on our side to make this real? 
+  (city agency, nonprofit, platform, regulator)
+- How would people actually find out this exists and start 
+  using it?
+
+In public service, the partner is often the channel too — 
+name that if it applies to us. Two to three sentences.
+```
+
+---
+
+### Block 5 · Cost Structure
+
+```
+What would it actually cost to build and keep running a 
+solution to our problem? Think about:
+- Technology and hosting
+- People needed to maintain it
+- Data, compliance, or legal costs
+- Translation or accessibility if relevant
+
+Keep it to three to four bullet points. Be specific, not vague.
+```
+
+---
+
+### Block 6 · Revenue & Funding Streams
+
+```
+Based on who pays (Block 2), describe exactly where the money 
+comes from. Is it a grant, an annual government contract, 
+a subscription, or something else?
+
+Does this funding renew automatically, or does it have to be 
+won again each year? What does that mean for how stable 
+this solution would be?
+
+Two to three sentences.
+```
+
+---
+
+### Reconcile
+
+```
+Here are our six blocks: [paste your completed BMC].
+Here is our SOM from Day 3: [paste your SOM number and source].
+
+Does our funding source actually support that SOM number? 
+If our funding is one grant or contract, is our SOM capped 
+by that budget rather than by total demand?
+
+Name the gap honestly if there is one. One paragraph.
+```
 
 ---
 

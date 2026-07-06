@@ -210,6 +210,35 @@ Rewrite anything that's vague before you touch Google Slides.
 
 Take the copy into Slides. One section per slide. Keep it visual — the slides support your spoken pitch, they don't replace it.
 
+**Step 4 — generate the slides automatically**
+
+Once you're happy with the content, run this in the same conversation:
+
+```
+Now convert the slide content above into a Google Apps Script 
+that will automatically create this presentation in Google Slides.
+
+Requirements:
+- 5 slides, one per section above
+- Clean, minimal design — white background, dark text
+- Slide title in large bold text at the top
+- Bullet points below, left-aligned
+- Include the visual/data note from each slide as a speaker note, 
+  not on the slide itself
+- Name the presentation "[Your Team Name] — Final Pitch Deck"
+
+Output only the Apps Script code, nothing else.
+```
+
+Then:
+1. Go to [script.google.com](https://script.google.com)
+2. Click **New Project**
+3. Delete the default code and paste what Gemini gave you
+4. Click **Run** → authorize when prompted
+5. Check your Google Drive — the presentation will be there
+
+Open it, review every slide, and edit anything that doesn't look right. The script gives you a starting point, not a finished deck.
+
 ---
 
 ## Part 3: Start Thinking About Day 5

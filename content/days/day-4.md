@@ -239,6 +239,20 @@ Then:
 
 Open it, review every slide, and edit anything that doesn't look right. The script gives you a starting point, not a finished deck.
 
+**Step 5 — create the slides in Gemini Canvas**
+
+Run this in the same Gemini conversation:
+
+```
+Create a Google Slides presentation from the slide content above 
+using Canvas. 5 slides, clean and minimal design, dark text on 
+white background. Slide titles bold and large. Bullet points 
+left-aligned. Speaker notes for each slide using the visual/data 
+notes from above.
+```
+
+Gemini will open a Canvas panel with the presentation. Review each slide, make any edits directly in Canvas, then export to Google Slides from the top right of the Canvas panel.
+
 ---
 
 ## Part 3: Start Thinking About Day 5

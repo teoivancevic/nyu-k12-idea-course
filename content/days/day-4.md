@@ -146,33 +146,69 @@ Name the gap honestly if there is one. One paragraph.
 
 Don't build the slides manually. Once your worksheet is complete, use this prompt to generate your deck.
 
-**Step 1 — paste your full worksheet into Gemini or Claude, then run:**
+**Step 1 — paste your full context into Gemini or Claude, then run:**
+
+First paste in this order:
+1. Your Day 1 worksheet
+2. Your Day 2 problem statement doc
+3. Your completed Day 3–4 worksheet (all parts including BMC)
+
+Then run:
 
 ```
-I'm going to give you our completed business analysis worksheet. 
-Use it to write the content for a presentation slide deck. 
+Based on everything above, write the content for our pitch deck.
+The deck has 5 slides and will be presented to city officials 
+or investors in a 5–7 minute live pitch followed by Q&A.
 
-The deck has [X] slides structured as follows:
+Write each slide as:
+- A short headline (one line, specific — not generic)
+- 3 bullet points maximum, one sentence each
+- A note on what visual or data point would strengthen this slide
 
-[PLACEHOLDER — paste the professor's slide outline here once confirmed]
+The 5 slides are:
 
-For each slide:
-- Write a short headline (one line)
-- Write 3–4 bullet points maximum, one sentence each
-- Flag any section where our data seems weak or unverified
-- Keep language plain — imagine presenting to a city official, 
-  not a tech conference
+Slide 1 — The Problem
+Who is affected, what specifically goes wrong, and one real 
+number that proves this matters. This is our Day 2 headline 
+sentence made visual.
 
-Here is our worksheet: [paste full Day 3–4 worksheet]
+Slide 2 — Market & Competitors
+TAM/SAM/SOM with our sanity-check number. Who's already 
+trying to solve this and why our angle is different. 
+Reference our differentiation map if relevant.
+
+Slide 3 — Our Solution
+What we're building in AI Studio and what it actually does 
+for the user. Not a feature list — one clear outcome. 
+Include a placeholder for our live demo moment.
+
+Slide 4 — Business Model
+Our six-block canvas compressed into one slide. Who we serve, 
+who pays, value proposition, key partners, cost, funding. 
+Flag the reconcile finding if our SOM is capped by funding.
+
+Slide 5 — Impact & What's Next
+What changes if this works, who benefits, and what equity 
+considerations we've thought through. What would need to be 
+true to scale this beyond year one.
+
+Keep language plain. Imagine a city official reading this — 
+not a tech conference. Flag any claim that isn't backed by 
+a source we already found.
 ```
 
-**Step 2 — take the output into Google Slides**
+**Step 2 — review as a team before building**
 
-Either build it manually from the copy Gemini gives you, or ask it to format as a structured list you can paste slide by slide.
+Read the output out loud together. For each slide ask:
+- Could this apply to any team's project, or is it specific to ours?
+- Is every number sourced?
+- Would a city official find this credible, or does it sound made up?
 
-**Step 3 — review as a team**
+Rewrite anything that's vague before you touch Google Slides.
 
-Read every slide out loud. If you can't explain a number or a claim without looking at the slide, it needs to be simpler. If a bullet point is vague enough that it could apply to any team's problem, rewrite it.
+**Step 3 — build it in Google Slides**
+
+Take the copy into Slides. One section per slide. Keep it visual — the slides support your spoken pitch, they don't replace it.
 
 ---
 

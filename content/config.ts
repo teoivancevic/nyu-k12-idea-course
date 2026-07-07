@@ -46,7 +46,7 @@ export const courseConfig = {
       date: "July 8",
       weekday: "Tue",
       theme: "Design an AI solution",
-      available: false,
+      available: true,
     },
     {
       week: 2,

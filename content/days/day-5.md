@@ -16,9 +16,61 @@ actionItems:
   - "Continue building after the field trip"
 ---
 
-## 9:00–10:30 · Vibecoding Workshop
+## 9:00–10:30 · Morning Session: Know Your Project
 
-*[PLACEHOLDER — vibecoding content, what they build, how they build it, prompts and structure TBD based on credit card / publishing concerns]*
+### Why This Morning Matters
+
+Before you can build something, you need to understand what you're building and why. This morning we're going to make sure everyone actually understands their own project — not just the words in the doc, but what it means and why it matters.
+
+---
+
+### Step 1 · Laptops Closed (5 min)
+
+No screens. Each team gets one or two minutes to answer out loud:
+
+- What problem are you solving?
+- Who has this problem?
+- What does your solution actually do?
+
+Don't worry if this is hard. That's the point.
+
+---
+
+### Step 2 · Read Your Own Work (25 min)
+
+Open your team's combined project doc from the [IDEA Student Content folder](https://drive.google.com/drive/folders/1fTCKjo69mH2vIqMdXovxo9bVolQyzI9l?usp=sharing).
+
+Read everything your team has produced across Days 1–4. All of it. Don't skim.
+
+While you read, leave exactly three comments on the doc:
+
+1. **Something you can explain in your own words** — a part of your project you genuinely understand and could describe to a stranger
+2. **Something you're not sure is actually true** — a claim, a number, or an assumption that you're not confident in
+3. **Something you think is weak or missing** — a gap in your problem statement, your market sizing, your BMC, or your solution idea
+
+These comments are for you, not for a grade. Be honest.
+
+---
+
+### Step 3 · Explain It Again (10 min)
+
+Laptops open this time. One question per team:
+
+*What is the one thing your solution actually does for the user?*
+
+Not the whole project. Just that one thing.
+
+---
+
+### Step 4 · Why This Matters — Vibecoding Demo (20 min)
+
+You can't build something you don't understand. And when you're working with AI to build a prototype, the AI will sound confident whether your idea is good or not. Your job is to know your project well enough to push back on the output, not just accept it.
+
+Here's what that actually looks like in practice.
+
+*[Teo live demo — vibecoding a real project, showing the iteration loop: try something → see what's wrong → describe the problem → try again]*
+
+The skill isn't writing the perfect prompt the first time. It's knowing what's wrong with the output and being able to say why.
 
 ---
 

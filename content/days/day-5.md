@@ -54,7 +54,42 @@ These comments are for you, not for a grade. Be honest.
 
 ---
 
-### Step 3 · Explain It Again (10 min)
+### Step 3 · Get Honest Feedback from AI (15 min)
+
+You've read your own work and formed your own opinion. Now ask Gemini to review it critically.
+
+Open a new Gemini conversation, paste your full combined doc, then run this prompt:
+
+```
+Here is all the work my team has produced so far across Days 1–4:
+
+[paste the full combined doc]
+
+Review everything critically. I want honest feedback, not 
+encouragement.
+
+Specifically:
+1. Does the market sizing in Part A actually match our problem 
+   statement and domain? Or did it drift to a different product 
+   or market entirely?
+2. Are the numbers in our market sizing real and sourced, or 
+   did they get made up? Be honest.
+3. Is there anything in the Business Model Canvas that 
+   contradicts or doesn't match what we found in the market 
+   sizing or problem statement?
+4. What is the weakest part of our entire submission — the 
+   thing a city official or investor would push back on hardest?
+5. What is one specific thing we should fix before we build 
+   a prototype?
+
+Be direct. Don't soften the feedback.
+```
+
+Read the feedback as a team. Compare it to the three comments you left yourself. Did Gemini find something you missed? Did you find something Gemini missed?
+
+---
+
+### Step 4 · Explain It Again (10 min)
 
 Laptops open this time. One question per team:
 
@@ -64,13 +99,15 @@ Not the whole project. Just that one thing.
 
 ---
 
-### Step 4 · Why This Matters — Vibecoding Demo (20 min)
+### Step 5 · Why This Matters — Vibecoding Demo (20 min)
 
 You can't build something you don't understand. And when you're working with AI to build a prototype, the AI will sound confident whether your idea is good or not. Your job is to know your project well enough to push back on the output, not just accept it.
 
-Here's what that actually looks like in practice.
+That's exactly what you just practiced with the feedback prompt — using AI to critique AI output. That same skill is what makes vibecoding actually work.
 
-*[Teo live demo — vibecoding a real project, showing the iteration loop: try something → see what's wrong → describe the problem → try again]*
+Here's what the iteration loop looks like in practice.
+
+*[Teo live demo — vibecoding a real project, showing: try something → see what's wrong → describe the problem specifically → try again]*
 
 The skill isn't writing the perfect prompt the first time. It's knowing what's wrong with the output and being able to say why.
 

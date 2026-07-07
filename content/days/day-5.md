@@ -4,6 +4,8 @@ title: "Build Your AI Solution"
 lectureSlides: ""
 granolaNotesUrl: ""
 workshopLinks:
+  - label: "IDEA Student Content Folder"
+    url: "https://drive.google.com/drive/folders/1fTCKjo69mH2vIqMdXovxo9bVolQyzI9l?usp=sharing"
   - label: "Google AI Studio"
     url: "https://aistudio.google.com"
   - label: "Google Gemini"

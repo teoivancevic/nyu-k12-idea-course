@@ -354,3 +354,88 @@ of city officials and investors.
 ```
 
 Practice saying it out loud twice before you leave today.
+
+---
+
+### Goal 3 — Write Your Presentation Script
+
+Friday is a 10-minute live presentation, judged by the instructor and TAs playing the role of city officials or investors. That breaks down roughly as:
+
+- **6–7 minutes** — your pitch, slide by slide
+- **Remaining time** — live Q&A
+
+Your deliverable has three parts, per the syllabus:
+1. A pitch deck covering the problem, business model, market analysis, solution design, and impact
+2. A working AI demo built in AI Studio showing the core logic of your solution
+3. The live 10-minute presentation itself
+
+Today you write the script for part 3. Use everything from your deck (Day 4), your app (this morning), and your demo intro (Goal 2) as source material.
+
+Open a new Gemini conversation, paste your full deck content and your demo intro, then run:
+
+```
+Here is our pitch deck content and our demo 
+introduction: [paste both].
+
+Write us a script for a 10-minute live 
+presentation. 6-7 minutes of speaking, 
+5 slides, followed by Q&A.
+
+Structure it slide by slide, clearly labeled. 
+For each slide give us two things:
+
+1. SHORT VERSION — what we actually say out 
+   loud. Tight, confident, no filler. This is 
+   what we rehearse and default to.
+
+2. EXTRA DETAIL (cuttable) — one or two 
+   additional sentences with more depth or 
+   a supporting number, clearly marked as 
+   optional. We'll only use this if we're 
+   ahead on time or a judge asks about it 
+   directly.
+
+Cover these 5 slides: Problem, Market & 
+Competitors, Solution (with our live demo), 
+Business Model, Impact & What's Next.
+
+Include a line at the start of the Solution 
+slide script that hands off to the live demo, 
+and a line right after it that hands back 
+from the demo into the rest of the pitch.
+
+End with a one-line closing statement that 
+invites questions.
+
+Keep language plain — a city official or 
+investor should understand every sentence 
+without needing us to explain a term.
+```
+
+Read the script out loud as a team, full run-through, timed. If you're over 7 minutes, cut from the "extra detail" lines first — never cut from the short version.
+
+---
+
+### Prepare for Q&A
+
+Judges will ask questions after your pitch. You won't know exactly what they'll ask, but you can prepare for the categories.
+
+```
+Based on our full pitch deck and app: 
+[paste both]
+
+Act as a skeptical city official or investor. 
+Give us the 6 hardest questions you would ask 
+after this pitch — one about the problem, one 
+about the market size or competitors, one 
+about who pays, one about the AI solution 
+itself, one about responsible use or a case 
+where it could fail, and one about what 
+happens after year one.
+
+For each question, also give us a short, 
+honest answer we could actually say out loud — 
+2-3 sentences max, no jargon.
+```
+
+Assign one question per pair on the team. Everyone should be able to answer any of the 6 if called on directly — judges may not ask the person who "owns" that slide.

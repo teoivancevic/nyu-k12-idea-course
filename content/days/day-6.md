@@ -410,6 +410,12 @@ invites questions.
 Keep language plain — a city official or 
 investor should understand every sentence 
 without needing us to explain a term.
+
+Also keep the sentences simple and easy to 
+say out loud — short sentences, common words, 
+nothing that's hard to pronounce or remember. 
+We are not native English speakers and need 
+to say this confidently from memory.
 ```
 
 Read the script out loud as a team, full run-through, timed. If you're over 7 minutes, cut from the "extra detail" lines first — never cut from the short version.

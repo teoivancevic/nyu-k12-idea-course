@@ -54,7 +54,7 @@ export const courseConfig = {
       date: "July 9",
       weekday: "Wed",
       theme: "Responsible human judgment",
-      available: false,
+      available: true,
     },
     {
       week: 2,

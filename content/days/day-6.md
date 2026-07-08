@@ -193,18 +193,30 @@ Paste the compiled prompt from Gemini when the builder asks for your app instruc
 
 ---
 
-### Add Your API Key
+### Add the API Key
 
 Your app needs this to actually work. Without it the interface loads but the AI won't respond.
 
-1. Click the **Settings** icon (gear icon, top right of AI Studio)
-2. Click **Secrets**
-3. Click **Add new secret**
-4. Name: `GEMINI_API_KEY`
-5. Value: *[Teo will give you this]*
-6. Save
+**Step 1 — Add the secret**
+1. Click the Settings gear icon (top right)
+2. Click **Secrets** → **Add new secret**
+3. Name: `GEMINI_CLASS_API_KEY`
+4. Value: *[paste the key Teo gives you]*
+5. Save
 
-That's it. Your app is now live.
+**Step 2 — Update the code**
+1. Click the **Code** tab at the top of AI Studio
+2. Use the file search in the project to find: `GEMINI_API_KEY`
+3. Replace every instance with: `GEMINI_CLASS_API_KEY`
+4. Save the changes
+
+**Step 3 — Check the chat panel**
+Look at the conversation panel on the left side 
+of AI Studio. If it prompts you to enter an API 
+key, paste the same key Teo gave you there too.
+
+Your app will now use the class API key and 
+the AI responses will work.
 
 ---
 
